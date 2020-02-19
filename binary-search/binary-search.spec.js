@@ -21,5 +21,20 @@ describe('Binary Search', () => {
 	});
 
 	//(OPTIONAL) WRITE YOUR OWN TESTS HERE. Include >=1 edge case :)
+	it('returns false if array is empty', () => {
+		expect(binarySearch([],7)).to.equal(false)
+	});
+
+	it('returns true if target value is in single-element array', () => {
+		expect(binarySearch([7],7)).to.equal(true)
+	});
+
+	it('returns true if target value is in middle of array', () => {
+		expect(binarySearch([1,2,3],2)).to.equal(true)
+	});
+
+	it('returns true if target is first element in two-element array', () => {
+		expect(binarySearch([2,3],2)).to.equal(true)
+	});
 
 });
